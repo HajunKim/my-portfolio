@@ -4,7 +4,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 40px; /* 정확히 40px의 마진 영역을 덮음 */
+    height: 8px; /* 정확히 8px의 마진 영역을 덮음 */
     background-color: #FFF; /* body 배경색과 동일 (흰색) */
     z-index: 99; /* 사이드바(z-index: 10)보다 위에, 
                    혹시 모를 다른 요소들보다도 위에 */
@@ -17,7 +17,7 @@
 .mainContainer {
     display: flex;
     max-width: 1440px; /* 358px (사이드바) + 1085px (메인) - 스펙 기준 */
-    margin: 40px auto; /* 페이지 상하 여백 추가, 중앙 배치 */
+    margin: 8px auto; /* 페이지 상하 여백 추가, 중앙 배치 */
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
     background-color: #FFF; 
 
@@ -39,12 +39,9 @@
          기능을 위해 아래 5줄을 추가했습니다.
     */
     position: sticky;
-    top: 40px; /* 상단 여백 40px을 띄우고 고정 (mainContainer의 margin과 동일) */
+    top: 8px; /* 상단 여백 8px을 띄우고 고정 (mainContainer의 margin과 동일) */
     align-self: flex-start; /* sticky가 flexbox 내에서 올바르게 작동하도록 */
-    
-    /* (보너스) 화면 높이가 사이드바보다 짧을 경우(예: 노트북) 대비 */
-    max-height: calc(100vh - 80px); /* 100vh = 화면높이, 80px = 상하 여백 */
-    overflow-y: auto; /* 만약 사이드바가 길어지면, 사이드바 *안에서* 스크롤됨 */
+
 }
 
 .profileImg { /* 'profile-img' -> 'profileImg' (JS 스타일) */
@@ -662,7 +659,7 @@
     /* 1. 기본 레이아웃 설정 */
     .mainContainer {
       flex-direction: column;
-      margin: 40px 0 0 0;
+      margin: 8px 0 0 0;
       max-width: 100%;
     }
     .sidebar {

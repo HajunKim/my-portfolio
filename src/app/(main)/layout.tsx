@@ -40,6 +40,7 @@ export default function MainLayout({
             <p className={styles.email}>hajune0628<span className={styles.at}>[at]</span>gmail.com</p>
             
             <nav className={styles.profileNav}>
+              <Link href="/">Home</Link>
               <Link href="/Research">Research</Link>
               <a 
                 href="/HajunKim_CV.pdf" 
