@@ -1,0 +1,723 @@
+/* ----- 1. 스크롤 가림용 헤더 (신규) ----- */
+.scrollBlockerHeader {
+    position: fixed; /* 스크롤과 상관없이 화면 상단에 고정 */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40px; /* 정확히 40px의 마진 영역을 덮음 */
+    background-color: #FFF; /* body 배경색과 동일 (흰색) */
+    z-index: 99; /* 사이드바(z-index: 10)보다 위에, 
+                   혹시 모를 다른 요소들보다도 위에 */
+  }
+  
+  /* ----- 2. 전체 레이아웃 (사이드바 + 메인) ----- */
+  /* ... (기존 .mainContainer 스타일) ... */
+
+/* ----- 2. 전체 레이아웃 (사이드바 + 메인) ----- */
+.mainContainer {
+    display: flex;
+    max-width: 1440px; /* 358px (사이드바) + 1085px (메인) - 스펙 기준 */
+    margin: 40px auto; /* 페이지 상하 여백 추가, 중앙 배치 */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    background-color: #FFF; 
+
+    position: relative;
+}
+
+/* ----- 3. 왼쪽 사이드바 (프로필) ----- */
+.sidebar {
+    width: 358px;
+    flex-shrink: 0;
+    background-color: #FFF;
+    
+    /* 1. 요청하신 '회색 선 제거'를 위해 
+         아래의 'border-right' 속성을 삭제했습니다.
+    */
+    /* border-right: 1px solid #E0E0E0; */ 
+
+    /* 2. 요청하신 '스크롤 따라오기' (Sticky) 
+         기능을 위해 아래 5줄을 추가했습니다.
+    */
+    position: sticky;
+    top: 40px; /* 상단 여백 40px을 띄우고 고정 (mainContainer의 margin과 동일) */
+    align-self: flex-start; /* sticky가 flexbox 내에서 올바르게 작동하도록 */
+    
+    /* (보너스) 화면 높이가 사이드바보다 짧을 경우(예: 노트북) 대비 */
+    max-height: calc(100vh - 80px); /* 100vh = 화면높이, 80px = 상하 여백 */
+    overflow-y: auto; /* 만약 사이드바가 길어지면, 사이드바 *안에서* 스크롤됨 */
+}
+
+.profileImg { /* 'profile-img' -> 'profileImg' (JS 스타일) */
+    width: 100%;
+    height: 290px;
+    object-fit: cover;
+}
+
+.profileInfo {
+    height: 315px; 
+    padding: 28px;
+    text-align: center;
+}
+
+.profileInfo h2 {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px;
+    margin-bottom: 8px;
+}
+
+.profileInfo .email {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 30px;
+}
+
+.profileInfo .email .at {
+    color: #818181;
+    font-weight: 300;
+}
+
+.profileNav {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 10px;
+}
+
+.profileNav a {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px;
+    margin-bottom: 23px;
+    display: flex;
+    align-items: center;
+}
+
+.profileNav a:hover {
+    color: #00A86E;
+}
+
+.linkedinIcon {
+    width: 25px;
+    height: 25px;
+    margin-left: -3px;
+    margin-top: -15px;
+}
+
+.sidebarSeparator {
+    width: 251px; /* 스펙: Fixed (251px) */
+    height: 1px; /* 스펙: Border 1px */
+    background-color: #CED8DE; /* 스펙: 색상 */
+    border: none; /* 기본 <hr> 테두리 제거 */
+    
+    /* 스펙의 Top: 588px은 절대값이므로, 
+       링크 아이템의 기본 여백(margin-bottom: 23px)을 활용합니다.
+    */
+    margin-top: 5px; /* LinkedIn 아이콘과의 간격 (조절 가능) */
+    margin-bottom: 5px; /* 아래쪽 간격 (조절 가능) */
+    margin-left: 0; /* 부모(.profileNav)의 정렬을 따름 */
+  }
+
+/* ----- 4. 오른쪽 메인 콘텐츠 ----- */
+.mainContent {
+    width: 1082px;
+    flex-shrink: 0;
+}
+
+/* --- 4a. 상단 히어로 배너 --- */
+.heroSection {
+    width: 100%;
+    height: 395px;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(180deg, #CED8DF 0%, #CDD8E0 0.01%, #D6DBD2 21.15%, #E3DEBE 46.15%, #EDEAD4 75.96%, #FAF9F1 100%);
+    display: flex;
+    align-items: center;
+    padding-left: 24px;
+}
+
+.heroBgImages {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.worldMap {
+    position: absolute;
+    width: 706px;
+    height: 286px;
+    top: 53px;
+    left: 109px;
+    opacity: 0.5;
+}
+
+.cloudImg {
+    position: absolute;
+    width: 1055px;
+    height: 418px;
+    top: 0;
+    left: 30px;
+    opacity: 0.7;
+}
+
+.heroSection h1 {
+    font-size: 42px;
+    font-weight: 700;
+    color: #0B2633;
+    line-height: 1;
+    position: relative;
+    z-index: 2;
+    margin-top: 280px;
+}
+
+.heroSection .highlight {
+    color: #00A86E;
+}
+
+/* --- 4b. 하단 콘텐츠 (About, Details) --- */
+.contentBody {
+    display: flex;
+    padding: 34px 20px 50px 27px;
+    gap: 26px;
+}
+
+.aboutSection {
+    width: 490px;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.aboutSection h2 {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1;
+    margin-bottom: 12px;
+}
+
+.aboutSection p {
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 24px;
+}
+
+.researchDiagram {
+    width: 475px;
+    height: 289px;
+    position: absolute;
+    top: 250px;
+    left: 15px;
+    z-index: 1;
+    opacity: 1;
+}
+
+.detailsSection {
+    flex-grow: 1;
+}
+
+.detailsSection h2 {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1;
+    margin-bottom: 15px;
+}
+
+.educationSection, .workSection {
+    margin-bottom: 30px;
+}
+
+.detailsSection h3 {
+    font-size: 15px;
+    margin-bottom: 7px;
+    line-height: 1;
+}
+
+.eduItem, .workItem {
+    margin-bottom: 25px; /* 이 25px 값을 늘리면 간격이 더 넓어집니다 */
+}
+
+
+.detailsSection h3 .year {
+    font-weight: 300;
+    margin-right: 8px;
+}
+
+.detailsSection h3 {
+    font-weight: 500;
+}
+
+.detailsSection h3 .company {
+    font-weight: 300;
+}
+
+.detailsSection ul {
+    padding-left: 33px;
+}
+
+.detailsSection li {
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 24px;
+    position: relative;
+    padding-left: 15px;
+}
+
+.detailsSection li::before {
+    content: '•';
+    color: #555;
+    font-size: 16px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.detailsSection li ul {
+    padding-left: 15px;
+    margin-top: 5px;
+}
+
+.detailsSection li li::before {
+    content: '◦';
+    color: #777;
+    font-size: 12px;
+}
+
+/* ----- 5. Selected Research 섹션 ----- */
+/* ----- 5. Selected Research 섹션 (수정됨) ----- */
+.researchSection {
+    /* 스펙: background: #FAF9F1; (배경색) */
+    background: #FAF9F1;
+    /* (Top 1004px - 966px) = 38px */
+    /* (Left 385px - 358px) = 27px (왼쪽) */
+    /* (Right 1440px - (753px + 671px)) = 16px (오른쪽) */
+    padding: 38px 16px 50px 27px; /* (위, 오른쪽, 아래, 왼쪽) 비대칭 패딩 */
+  }
+  
+  .researchSection h2 {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1;
+    margin-bottom: 35px;
+  }
+  
+  .projectsList {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .projectItem {
+    display: flex; /* 이미지와 텍스트를 가로로 배치 */
+    align-items: center; /* 위쪽 정렬 */
+    /* gap은 projectImageContainer 너비에 포함시킴 */
+  }
+  
+  .projectImageContainer {
+    /* 스펙 기준: 
+      텍스트 Left (753px) - 이미지 Left (388px) = 365px 
+      이 컨테이너의 너비를 365px로 고정합니다.
+    */
+    width: 365px;
+    flex-shrink: 0; /* 너비가 줄어들지 않도록 고정 */
+    /* 이미지가 이 컨테이너 안에서 왼쪽 정렬 (스펙 388px 기준) */
+    text-align: left; 
+  }
+  
+  /* 이미지 기본 스타일 */
+  .projectImageShadow,
+  .projectImageDropShadow {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+  
+  /* 스펙: box-shadow */
+  .projectImageShadow {
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  }
+  
+  /* 스펙: filter: drop-shadow */
+  .projectImageDropShadow {
+    filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
+  }
+  
+  
+  .projectDetails {
+    flex-grow: 1;
+    /* 스펙 기준: Fixed (671px) */
+    max-width: 671px;
+  }
+  
+  .projectDetails h3 {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px;
+  }
+  
+  .projectContext {
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 30px;
+    margin-bottom: 10px;
+  }
+  
+  /* 스펙: Hajun Kim* 폰트 600 */
+  .author {
+    font-weight: 600;
+  }
+  
+  .projectDetails ul {
+    /* 스펙 기준 (743px) - 텍스트 기준 (753px) = -10px? */
+    /* 스펙이 약간 꼬여있으므로, 가독성을 위해 20px 들여쓰기 */
+    padding-left: 5px;
+  }
+  
+  .projectDetails li {
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 24px;
+    position: relative;
+    padding-left: 15px;
+  }
+  
+  .projectDetails li::before {
+    content: '•';
+    color: #555;
+    font-size: 14px;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  
+  /* ----- 6. 구분선 (Separator) (수정됨) ----- */
+  .projectSeparator {
+    /* 스펙 기준: Fixed (1037px) */
+    /* (컨테이너 1082px) - (좌패딩 27px) - (우패딩 16px) = 1039px */
+    /* 스펙과 거의 일치하므로 100%로 꽉 채웁니다 */
+    width: 100%;
+    max-width: 1037px; /* 스펙 최대치 */
+    height: 1px;
+    background: #CED8DE;
+    border: none;
+    margin: 40px auto; /* 위아래 40px, 좌우 중앙 */
+  }
+  
+  
+  /* ----- 7. 푸터 (Footer) ----- */
+  .footer {
+    font-size: 20px;
+    font-weight: 500;
+    font-style: italic;
+    line-height: 1;
+    text-align: center;
+    padding: 40px 0;
+    color: #555;
+    /* 푸터는 researchSection과 별개로 흰색 배경을 가집니다 */
+
+    position: absolute; /* 절대 위치로 변경 */
+    bottom: -80px;     /* .mainContainer의 80px '아래'에 배치 */
+    left: 0;           /* .mainContainer의 왼쪽에 붙임 */
+    width: 100%;       /* .mainContainer의 100% 너비(1440px)를 가짐 */
+  }
+
+  /* --- (보너스) 중앙 정렬 이미지 클래스 수정 --- */
+  /* (아까 만든 .centerImage를 좀 더 견고하게 수정합니다) */
+  .centerImage {
+    /* 이미지를 컨테이너(.projectImageContainer)의 
+       가로 중앙에 배치합니다. */
+    margin: 0 auto;
+    display: block;
+  }
+
+  /* ----- 8. 프로젝트 상세 버튼 ----- */
+.projectButtonContainer {
+    /* .projectDetails (텍스트)가 남은 공간을 다 차지하고, 
+       이 버튼 컨테이너는 오른쪽에 고정되도록 합니다. */
+    flex-shrink: 0;
+    
+    /* 텍스트와 버튼 사이의 간격을 줍니다 */
+    margin-left: 20px; 
+    /* 버튼을 10px 아래로 밀어냅니다 */
+    margin-top: 00px;
+  }
+  
+  .projectButton {
+    /* 버튼 이미지에 간단한 호버 효과 */
+    transition: transform 0.2s ease, opacity 0.2s ease;
+    opacity: 0.7; /* 기본적으로 살짝 투명하게 */
+  }
+  
+  .projectButton:hover {
+    transform: scale(1.1); /* 살짝 커지게 */
+    opacity: 1; /* 불투명하게 */
+    cursor: pointer;
+  }
+  
+/* src/app/page.module.css (맨 아래에 추가) */
+
+/* ----- 9. Publication 섹션 (신규) ----- */
+.publicationSection {
+    /* (Top 429px - Hero 395px) = 34px */
+    /* (Left 382px - Sidebar 358px) = 24px */
+    padding: 34px 24px;
+    background: #FFF; /* 스크린샷 배경은 흰색 */
+  }
+  
+  .publicationSection h2 {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1; /* 100% */
+    margin-bottom: 25px; /* (478px - 429px - 23px) */
+  }
+  
+  .publicationList {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .publicationItem {
+    /* 스펙에 높이 90px이 있지만, 텍스트 길이에 따라 유연하게 */
+  }
+  
+  .publicationItem h3 {
+    font-size: 15px;
+    font-weight: 300; /* Light */
+    line-height: 30px;
+    color: #000;
+  }
+  
+  .publicationItem p {
+    font-size: 15px;
+    font-weight: 300; /* Light */
+    line-height: 30px;
+    color: #333; /* 본문과 구분되게 살짝 연하게 */
+  }
+  
+  .pubAuthor {
+    font-weight: 700; /* Bold */
+    color: #000;
+  }
+  
+  .publicationSeparator {
+    width: 100%; /* 스펙 1004px (거의 100%) */
+    max-width: 1004px;
+    height: 1px;
+    background: #CED8DE;
+    border: none;
+    /* 스펙의 Top 값들 (592, 730...) 간격은 약 138px.
+       항목 높이가 유동적이므로, 고정 여백을 줍니다. */
+    margin: 24px 0; /* 위아래 24px */
+  }
+
+  /* ----- 10. Project Detail Page (신규) ----- */
+.projectDetailSection {
+    padding: 34px 40px 80px 40px; /* 상, 좌우, 하 여백 */
+    background: #FFF;
+    /* (Left 382px - Sidebar 358px) = 24px 이지만, 
+       가독성을 위해 여유있게 40px 줍니다. */
+  }
+  
+  .projectDetailHeader {
+    margin-bottom: 30px;
+    border-bottom: 1px solid #EEE; /* 제목과 본문 구분선 */
+    padding-bottom: 20px;
+  }
+  
+  .projectDetailTitle {
+    /* 덤프: fontSize: 32, fontWeight: 500 */
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 1.2; /* 34px */
+    color: #0B2633;
+    margin-bottom: 10px;
+  }
+  
+  .projectDetailSubtitle {
+    /* 덤프: fontSize: 13, fontWeight: 300 */
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 1.5; /* 34px는 너무 넓음 */
+    color: #333;
+  }
+  
+  .projectDetailAuthor {
+    /* 덤프: fontWeight: 600/700 */
+    font-weight: 600;
+    color: #000;
+  }
+  
+  .projectDetailBody {
+    /* 덤프: fontSize: 15, fontWeight: 300 */
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 24px;
+    color: #222;
+    margin-bottom: 50px;
+    /* 덤프의 width: 1005px 등은 무시하고, 
+       부모 컨테이너에 맞게 100%로 채웁니다 */
+  }
+  
+  .projectDetailSubheading {
+    /* 덤프: fontWeight: 600/700 */
+    font-weight: 600;
+    color: #000;
+  }
+  
+  .projectDetailFigure {
+    margin: 60px 0 60px 0; /* 위아래 여백 */
+    width: 100%;
+  }
+  
+  .projectDetailImage {
+    max-width: 100%;
+    height: auto; 
+    border-radius: 4px; 
+    /* 1. 요청하신 '그림자 제거' (주석 처리) */
+    /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); */
+  
+    /* 2. 요청하신 '중앙 정렬' */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .projectDetailCaption {
+    /* 스펙 적용: 12px, 600 weight, 17px line-height */
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 17px;
+    color: #555;
+    margin-top: 10px;
+  }
+  
+
+  /* --- ▼▼▼ [신규] Key Findings 스타일 ▼▼▼ --- */
+.projectDetailSubheadingSecondary {
+    /* Key Findings 이미지의 소제목 (Automating...) 스타일 */
+    font-size: 15px;
+    font-weight: 600; /* Semi Bold */
+    line-height: 24px;
+    color: #000;
+    margin-top: 24px; /* 본문 단락(p)의 기본 여백과 동일하게 */
+    margin-bottom: 10px; /* 불릿 리스트와의 여백 */
+  }
+  
+  .projectDetailList {
+    list-style-type: disc; /* 불릿 포인트 */
+    padding-left: 20px; /* 들여쓰기 */
+    margin-bottom: 24px; /* 다음 섹션과의 여백 */
+  }
+  
+  .projectDetailList li {
+    /* 본문과 동일한 스타일 적용 */
+    list-style: disc;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 24px;
+    color: #222;
+    padding-left: 5px; /* 불릿과의 간격 */
+    margin-bottom: 5px; /* 항목 간 간격 */
+  }
+  /* --- ▲▲▲ 여기까지 신규 추가 ▲▲▲ --- */
+
+  /* src/app/page.module.css (맨 아래에 추가) */
+
+/* ----- 11. Project Detail Page (추가 스타일) ----- */
+
+.projectDetailHighlightBox {
+    /* 덤프의 #F2F2F2 배경 스타일 */
+    background-color: #F2F2F2;
+    padding: 24px 30px; /* 안쪽 여백 */
+    border-radius: 4px;
+    margin: 24px 0; /* 위아래 여백 */
+  }
+  
+  .projectDetailImageWithShadow {
+    /* 덤프의 box-shadow 스타일 */
+    /* (중앙 정렬, 그림자 제거 요청이 있었지만, 
+       이 덤프는 box-shadow를 명시했으므로 추가합니다) */
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    max-width: 100%;
+    height: auto; 
+    border-radius: 4px; 
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+.captionCenter {
+    text-align: center;
+    padding: 0 10%; /* (중앙 정렬 캡션은 좌우 여백이 있는 게 보기 좋습니다) */
+  }
+
+  /* ----- 12. 최소 반응형 코드 (모바일용) ----- */
+
+/* ----- 12. 최소 반응형 코드 (모바일용) ----- */
+
+/* 화면 너비가 1100px 이하일 때만 이 스타일을 적용 */
+@media (max-width: 1100px) {
+
+    /* 1. 기본 레이아웃 설정 */
+    .mainContainer {
+      flex-direction: column;
+      margin: 40px 0 0 0;
+      max-width: 100%;
+    }
+    .sidebar {
+      width: 100%;
+      position: static; /* 고정 해제 */
+      max-height: none; 
+      overflow-y: visible;
+    }
+    .mainContent {
+      width: 100%;
+    }
+  
+    /* --- ▼▼▼ [최종 수정] Diagram.png 겹침 문제 해결 ▼▼▼ --- */
+    
+    /* 5. Diagram.png가 포함된 About Section의 Absolute 설정 무효화 */
+    .aboutSection {
+      position: static !important; /* 자식이 Absolute로 고정되는 기준 해제 */
+      width: 100%;
+      margin-bottom: 40px;
+    }
+  
+    /* 6. Diagram.png 이미지 자체의 Absolute 설정 및 Z-index 무효화 */
+    .researchDiagram { 
+      /* 원래 .researchDiagram은 Diagram.png에 적용된 클래스입니다. */
+      position: static !important; /* Absolute 강제 해제 (가장 중요!) */
+      margin: 30px auto; /* 중앙 정렬을 위한 위아래 여백 추가 */
+      display: block;
+      width: 80%; /* 모바일에서 너무 크지 않도록 너비 조절 */
+      height: auto;
+      left: 0;
+      top: auto;
+    }
+    
+    /* --- [기존] About/Education 세로 쌓기 --- */
+    .contentBody {
+      display: block; 
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    /* (About Section 스타일은 위로 통합됨) */
+  
+    /* --- [기존] Research 이미지/텍스트 세로 쌓기 --- */
+    .projectItem {
+      display: block;
+    }
+    .projectImageContainer {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .projectDetails {
+      max-width: 100%;
+    }
+    .projectButtonContainer {
+      text-align: center;
+      margin-top: 25px;
+    }
+  }
