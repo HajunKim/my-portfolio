@@ -6,7 +6,11 @@ import Link from 'next/link';
 import styles from '../page.module.css'; 
 
 // 이 레이아웃이 하위 페이지(children)를 감싸게 됩니다.
-export default function MainLayout({ children }) {
+export default function MainLayout({
+    children,
+  }: {
+    children: React.ReactNode;
+  }) {
   return (
     // 1. React Fragment <>로 전체를 감싸줍니다.
     <>
