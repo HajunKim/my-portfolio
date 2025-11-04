@@ -47,7 +47,7 @@ export default function MainLayout({
                 >
                 Curricular Vital
                 </a>
-              <Link href="https://www.linkedin.com" target="_blank">
+              <Link href="https://www.linkedin.com/in/%ED%95%98%EC%A4%80-%EA%B9%80-85305b23b/" target="_blank">
                 <Image 
                   src="/images/linkedin.png" 
                   alt="LinkedIn" 
