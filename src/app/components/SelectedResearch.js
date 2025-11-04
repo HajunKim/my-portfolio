@@ -52,7 +52,7 @@ const projectData = [
   },
   {
     id: 1,
-    image: '/images/Unlocking_First.png',
+    image: '/images/Unlocking_FIRST.png',
     width: 292,
     height: 318,
     shadowType: 'dropShadow',
@@ -73,7 +73,7 @@ const projectData = [
   },
   {
     id: 5,
-    image: '/images/ImageTool_First.png',
+    image: '/images/ImageTool_FIRST.png',
     width: 326,
     height: 185,
     shadowType: 'boxShadow',
