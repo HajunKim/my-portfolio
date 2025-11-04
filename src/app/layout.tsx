@@ -12,7 +12,11 @@ export const metadata = {
   description: 'AI Researcher Hajun Kim\'s personal webpage',
 };
 
-export default function RootLayout({ children }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="ko">
       {/* <body>에 Inter 폰트 적용 */}
@@ -20,3 +24,5 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
+
+
