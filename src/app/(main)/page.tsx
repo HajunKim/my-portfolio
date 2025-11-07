@@ -46,8 +46,8 @@ export default function Home() {
             <div className={styles.eduItem}>
               <h3><span className={styles.year}>2022</span> Korean Advance Institute of Science & Technology(KAIST)</h3>
               <ul>
-                <li>M.S in Graduate School of Culture Technology (specialization in Human Computer Interaction)</li>
-                <li>Advisor: Juhan Nam</li>
+                <li>M.S in Graduate School of Culture Technology <br /> (specialization in Human Computer Interaction)</li>
+                <li>Advisor: Juhan Nam & Byungjoo Lee</li>
               </ul>
             </div>
             <div className={styles.eduItem}>

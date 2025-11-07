@@ -78,7 +78,7 @@ const publicationData = [
   },
   {
     id: 8,
-    title: 'Game Design Guide for Connecting Generations: Focusing on Gamers Aged 50 and',
+    title: 'Game Design Guide for Connecting Generations: Focusing on Gamers Aged 50 and Older',
     context: 'Book funded by Ministry of Culture, Sports and Tourism and Korea Creative Content Agency',
     authors: <></> // 스펙에 저자 없음
   },
