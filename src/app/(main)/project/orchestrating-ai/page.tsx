@@ -157,9 +157,9 @@ export default function ProjectOrchestrationPage() {
         {/* --- 11. [반영] 텍스트 (Image 7번과 8번 사이 -> 5번과 6번 사이로 해석) --- */}
         <h3 className={styles.projectDetailSubheadingSecondary}>Key Results</h3>
         <ul className={styles.projectDetailList}>
-          <li>Idea Quality & Diversity: IdeAmigos produced higher-quality ideas compared to the single-agent baseline. Notably, the top 3 highest-rated ideas for both topics were all generated using IdeAmigos2. It also generated a broader and more diverse range of ideas, producing more semantic clusters and outliers 3.</li>
-          <li>User Perception: Participants rated the ideas from IdeAmigos as statistically significantly more original (p=0.013), valuable (p=0.047), and surprising (p=0.018) than those from the baseline 4.</li>
-          <li>Usability: Despite the better ideas, participants reported lower usability satisfaction with IdeAmigos5. They cited that managing multiple conversations and reading more text increased fatigue and split their attention6.</li>
+          <li>Idea Quality & Diversity: IdeAmigos produced higher-quality ideas compared to the single-agent baseline. Notably, the top 3 highest-rated ideas for both topics were all generated using IdeAmigos. It also generated a broader and more diverse range of ideas, producing more semantic clusters and outliers.</li>
+          <li>User Perception: Participants rated the ideas from IdeAmigos as statistically significantly more original (p=0.013), valuable (p=0.047), and surprising (p=0.018) than those from the baseline.</li>
+          <li>Usability: Despite the better ideas, participants reported lower usability satisfaction with IdeAmigos. They cited that managing multiple conversations and reading more text increased fatigue and split their attention.</li>
         </ul>
 
 
