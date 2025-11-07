@@ -158,6 +158,7 @@ export default function ProjectOrchestrationPage() {
         <h3 className={styles.projectDetailSubheadingSecondary}>Key Results</h3>
         <ul className={styles.projectDetailList}>
           <li>Idea Quality & Diversity: IdeAmigos produced higher-quality ideas compared to the single-agent baseline. Notably, the top 3 highest-rated ideas for both topics were all generated using IdeAmigos. It also generated a broader and more diverse range of ideas, producing more semantic clusters and outliers.</li>
+          <li>Idea Homogeneity: Despite greater within-session diversity, IdeAmigos showed comparable inter-user homogeneity to the baseline, revealing the inherent limitation of shared base models in fostering originality across users.</li>
           <li>User Perception: Participants rated the ideas from IdeAmigos as statistically significantly more original (p=0.013), valuable (p=0.047), and surprising (p=0.018) than those from the baseline.</li>
           <li>Usability: Despite the better ideas, participants reported lower usability satisfaction with IdeAmigos. They cited that managing multiple conversations and reading more text increased fatigue and split their attention.</li>
         </ul>
