@@ -16,7 +16,7 @@ const projectData = [
         shadowType: 'boxShadow',
         link: '/project/orchestrating-ai',
         title: 'IdeAmigos: Human-Orchestrated Multi-agent Tool for Supporting End-to-End Brainstorming',
-        context: '(Submitted: CHI 2026 Paper)',
+        context: '(In preparation: DIS 2026 Paper)',
         authors: (
             <>
             <span className={styles.author}>Hajun Kim</span>, Jeongeon Park
