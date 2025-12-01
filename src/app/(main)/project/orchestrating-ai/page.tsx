@@ -15,7 +15,7 @@ export default function ProjectOrchestrationPage() {
           IdeAmigos: Human-Orchestrated Multi-agent Tool for Supporting End-to-End Brainstorming
           </h1>
           <p className={styles.projectDetailSubtitle}>
-            Submitted to CHI 26: Proceedings of the CHI Conference on Human Factors in Computing Systems
+            In preparation to DIS 26: ACM Designing Interactive Systems
             <br />
             <span className={styles.projectDetailAuthor}>Hajun Kim*</span>, Jeongeon Park 
           </p>

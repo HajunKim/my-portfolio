@@ -20,8 +20,7 @@ export default function Home() {
         <div className={styles.aboutSection}>
           <h2>About Me</h2>
           <p>
-            Hello, I am Hajun Kim. I'm currently working at NEOWIZ Games as part
-            of my alternative military service.
+            Hello, I am Hajun Kim. I'm currently working at NEOWIZ Games as an AI researcher.
             <br /><br />
             My research explores the critical tension between AI-driven efficiency
             and the preservation of human cognition. I design AI-augmented

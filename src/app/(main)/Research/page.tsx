@@ -9,7 +9,7 @@ const publicationData = [
   {
     id: 1,
     title: 'IdeAmigos: Human-Orchestrated Multi-agent Tool for Supporting End-to-End Brainstorming',
-    context: '(Submitted: CHI 2026 Paper)',
+    context: '(In preparation: DIS 2026 Paper)',
     authors: (
       <>
         <span className={styles.pubAuthor}>Hajun Kim</span>, Jeongeon Park
@@ -78,9 +78,11 @@ const publicationData = [
   },
   {
     id: 8,
-    title: 'Game Design Guide for Connecting Generations: Focusing on Gamers Aged 50 and Older',
+    title: 'Connecting Generations: Game Design Guide for Adults in Their 50s and Older',
     context: 'Book funded by Ministry of Culture, Sports and Tourism and Korea Creative Content Agency',
-    authors: <></> // 스펙에 저자 없음
+    authors: <>
+      Byungjoo Lee, Youngim Do, Kyungmyun Lee, Junyoung Shin, Minseok Do, Seyun Lee, Injung Lee, Seokbeom Park, <span className={styles.pubAuthor}>Hajun Kim</span>, Jinyoung Lee, Hyunwook Lee, Taeun Kim, Haein Kim, Jongchang Park, Kyunghyun Lee, Hyunah Cho
+    </> // 스펙에 저자 없음
   },
 ];
 
