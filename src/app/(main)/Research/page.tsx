@@ -58,7 +58,7 @@ const publicationData = [
   },
   {
     id: 6,
-    title: 'Generational Empathy through Game Design Strategy: A Case Study on the Development of the Mobile Game <Ghost',
+    title: 'Generational Empathy through Game Design Strategy: A Case Study on the Development of the Mobile Game <Ghost>',
     context: 'Korean Game Society 2021',
     authors: (
       <>
