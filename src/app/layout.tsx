@@ -1,10 +1,10 @@
-import { Inter } from 'next/font/google'; // Google 폰트(Inter) 가져오기
-import './globals.css'; // 전역 스타일시트
+import { Inter } from 'next/font/google';
+import './globals.css';
+import Script from 'next/script'; 
 
-// Inter 폰트 설정 (Figma 스펙 반영)
 const inter = Inter({
   subsets: ['latin'],
-  weight: ['300', '500', '700'], // Light, Medium, Bold
+  weight: ['300', '500', '700'],
 });
 
 export const metadata = {
@@ -19,10 +19,28 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ko">
-      {/* <body>에 Inter 폰트 적용 */}
-      <body className={inter.className}>{children}</body> 
+      <body className={inter.className}>
+        
+        {/* ▼▼▼ 2. 여기에 구글 애널리틱스 코드를 넣으세요 ▼▼▼ */}
+        <Script
+          strategy="afterInteractive"
+          src={`https://www.googletagmanager.com/gtag/js?id=G-PP1FCJ293W`}
+        />
+        <Script
+          id="google-analytics"
+          strategy="afterInteractive"
+        >
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-PP1FCJ293W');
+          `}
+        </Script>
+        {/* ▲▲▲ 여기까지 ▲▲▲ */}
+
+        {children}
+      </body>
     </html>
   );
 }
-
-
