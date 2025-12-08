@@ -69,7 +69,7 @@ export default function Home() {
                   <ul>
                     <li>Developed novel pipelines for character agents enabling dynamic collaboration (LLMs-based).</li>
                     <li>Developed an image generation tool, focusing on Designer UX and Controllability through user studies.</li>
-                    <li>Fine-tuned generative models (LLMs, Diffusion), architected agent systems.</li>
+                    <li>Fine-tuned generative models (LLMs, Diffusion) and executed ML optimization.</li>
                   </ul>
                 </li>
               </ul>

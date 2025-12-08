@@ -12,7 +12,7 @@ export default function ProjectImageToolPage() {
         {/* --- 1. 헤더 (제목, 저자) --- */}
         <header className={styles.projectDetailHeader}>
           <h1 className={styles.projectDetailTitle}>
-            Image Generation Tool Tailored for Visual Designers to Maintain Game IP Consistency
+          Image Generation Tool for Game IP Consistency & 1.5-Year Longitudinal Study
           </h1>
           <p className={styles.projectDetailSubtitle}>
             Project Lead at NEOWIZ
@@ -26,14 +26,14 @@ export default function ProjectImageToolPage() {
         <p className={styles.projectDetailBody}>
           <strong className={styles.projectDetailSubheading}>Research Focus:</strong>
           <br /><br />
-          This two-year longitudinal study explores the co-design and integration of bespoke generative AI tools for senior game artists (5.3 years avg. experience). The research prioritized augmenting expert capabilities and preserving unique studio IP, shifting the focus from T2I to the more critical I2I functionalities, and analyzed the emergent collaborative strategies and performance impacts within professional creative workflows.
+          This 1.5 year longitudinal study explores the co-design and integration of bespoke generative AI tools for senior game artists (5.3 years avg. experience). The research prioritized augmenting expert capabilities and preserving unique studio IP, shifting the focus from T2I to the more critical I2I functionalities, and analyzed the emergent collaborative strategies and performance impacts within professional creative workflows.
         </p>
 
         {/* --- 3. 본문 1 --- */}
         <p className={styles.projectDetailBody}>
           This study began with the central challenge of preserving unique Intellectual Property (IP), a critical need for the 8 game studios involved. Unlike generic models, our goal was to augment the capabilities of expert artists, not replace them.
           <br /><br />
-          To achieve this, we initiated an in-depth qualitative phase, interviewing 16 senior artists (averaging 5.3 years of experience) to map their distinct workflows and identify specific pain points. At the project's inception, generative AI was nascent, and artists were often unsure of its potential. We therefore employed an iterative co-design process, holding repeated meetings to build and deploy early-stage, customized tools. These tools varied significantly, providing different functionalities tailored to each studio's specific game art style and pipeline.
+          To achieve this, we initiated an in-depth qualitative phase, interviewing 16 senior artists (averaging 5.3 years of experience) to map their distinct workflows and identify specific pain points. At the project's inception, generative AI was nascent, and artists were often unsure of its potential. We therefore employed an iterative co-design process, developing and deploying customized tools as technical probes. These probes offered functionalities specifically tailored to align with each studio's game art style and pipeline.
         </p>
 
         {/* --- 4. 이미지 + 캡션 1 --- */}
@@ -52,7 +52,7 @@ export default function ProjectImageToolPage() {
 
         {/* --- 5. 본문 2 + Key Findings (불릿포인트) --- */}
         <p className={styles.projectDetailBody}>
-          We then conducted a 1.5-year longitudinal analysis, collecting user data and observation as these domain experts integrated the tools into their daily work. This long-term perspective allowed us to identify emergent collaborative strategies and evolving needs, which were further validated through 12 follow-up interviews and user log analysis.
+          We then conducted a 1.5-year longitudinal analysis, collecting user data and observation as these domain experts integrated the tools into their daily work. This long-term perspective allowed us to identify nuanced human-AI collaboration patterns and pragmatic adaptation strategies, where artists confronted the AI's limitations, informing the precise design requirements for the next-generation tool.
         </p>
 
         <h3 className={styles.projectDetailSubheadingSecondary}>Key findings include:</h3>

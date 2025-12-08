@@ -78,13 +78,13 @@ const projectData = [
     height: 185,
     shadowType: 'boxShadow',
     link: '/project/image-generation-tool',
-    title: 'Image Generation Tool Tailored for Visual Designers to Maintain Game IP Consistency',
+    title: 'Image Generation Tool for Game IP Consistency & 1.5-Year Longitudinal Study',
     context: 'Project Lead, NEOWIZ',
     authors: <></>,
     description: [
       'Developed an image generation tool to support IP-consistent art creation across game studios.',
       'Conducted formative interviews with concept artists from eight in-house studios to analyze their needs.',
-      'Built web-based tools using customized ComfyUI pipelines optimized for each studio’s workflow.',
+      'Built web-based tools integrating customized ComfyUI pipelines and fine-tuned models, and conducted a 1.5-year longitudinal study to analyze usage patterns and propose next-generation solutions.',
     ],
   },
   {
