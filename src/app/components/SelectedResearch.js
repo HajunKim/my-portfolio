@@ -84,7 +84,7 @@ const projectData = [
     description: [
       'Developed an image generation tool to support IP-consistent art creation across game studios.',
       'Conducted formative interviews with concept artists from eight in-house studios to analyze their needs.',
-      'Built web-based tools integrating customized ComfyUI pipelines and fine-tuned models, and conducted a 1.5-year longitudinal study to analyze usage patterns and propose next-generation solutions.',
+      'Built web-based tools integrating customized ComfyUI pipelines and fine-tuned models, and conducted a 1.5-year longitudinal study to analyze usage patterns and propose a next-generation tool.',
     ],
   },
   {

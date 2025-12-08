@@ -26,14 +26,7 @@ export default function ProjectImageToolPage() {
         <p className={styles.projectDetailBody}>
           <strong className={styles.projectDetailSubheading}>Research Focus:</strong>
           <br /><br />
-          This 1.5 year longitudinal study explores the co-design and integration of bespoke generative AI tools for senior game artists (5.3 years avg. experience). The research prioritized augmenting expert capabilities and preserving unique studio IP, shifting the focus from T2I to the more critical I2I functionalities, and analyzed the emergent collaborative strategies and performance impacts within professional creative workflows.
-        </p>
-
-        {/* --- 3. 본문 1 --- */}
-        <p className={styles.projectDetailBody}>
-          This study began with the central challenge of preserving unique Intellectual Property (IP), a critical need for the 8 game studios involved. Unlike generic models, our goal was to augment the capabilities of expert artists, not replace them.
-          <br /><br />
-          To achieve this, we initiated an in-depth qualitative phase, interviewing 16 senior artists (averaging 5.3 years of experience) to map their distinct workflows and identify specific pain points. At the project's inception, generative AI was nascent, and artists were often unsure of its potential. We therefore employed an iterative co-design process, developing and deploying customized tools as technical probes. These probes offered functionalities specifically tailored to align with each studio's game art style and pipeline.
+          This 1.5-year longitudinal study investigates the integration of bespoke generative AI tools into the workflows of senior game concept artists. The research prioritizes augmenting expert capabilities and preserving unique studio IP by shifting the focus from generic Text-to-Image (T2I) models to context-aware Image-to-Image (I2I) functionalities. Through long-term observation, I analyzed emergent collaborative strategies to identify how AI can effectively support professional creative pipelines.
         </p>
 
         {/* --- 4. 이미지 + 캡션 1 --- */}
@@ -50,6 +43,32 @@ export default function ProjectImageToolPage() {
           </figcaption>
         </figure>
 
+        {/* --- 3. 본문 1 --- */}
+        <p className={styles.projectDetailBody}>
+          The technology probe The study initially engaged 16 senior concept artists (avg. experience: 5.3 years) across eight game studios. A primary challenge was that these experts struggled to conceptualize the potential of generative AI due to its nascent state and their high visual standards. Consequently, traditional co-design methods were insufficient. To bridge this gap, I employed a technology probe strategy. I developed and deployed a customized generation pipeline trained on studio-specific assets. This approach allowed artists to explore the technology in their actual work environment while ensuring their unique IP remained secure.
+        </p>
+
+
+        <figure className={styles.projectDetailFigure}>
+          <Image 
+            src="/images/ImageTool_process.png"
+            alt="Production Process of Concept Artists"
+            width={1007} 
+            height={1049}
+            className={styles.projectDetailImage} 
+          />
+          <figcaption className={styles.projectDetailCaption}>
+          Concept artist production workflow. After AI adoption, the traditional rendering/detailing stage shifted to an AI-assisted pipeline: image generation from sketches followed by post-processing.
+          </figcaption>
+        </figure>
+
+        <p className={styles.projectDetailBody}>
+          Over the 1.5-year period, I observed how these experts integrated the probe into their standard workflow, which consists of conceptualization, rough sketching, and final rendering. The study revealed a critical divide in adoption. Artists frequently abandoned the tool during the early conceptualization and sketching phases. They found it cognitively demanding to translate abstract visual ideas into text prompts. Furthermore, the fine-tuned models often produced repetitive outputs for similar text inputs, which hindered divergent thinking. Conversely, concept artists actively utilized the tool during the rendering phase to enhance quality and efficiency. However, this usage resulted in a fragmented and repetitive workflow that disrupted their creative immersion.
+        </p>
+
+  
+        
+
         {/* --- 5. 본문 2 + Key Findings (불릿포인트) --- */}
         <p className={styles.projectDetailBody}>
           We then conducted a 1.5-year longitudinal analysis, collecting user data and observation as these domain experts integrated the tools into their daily work. This long-term perspective allowed us to identify nuanced human-AI collaboration patterns and pragmatic adaptation strategies, where artists confronted the AI's limitations, informing the precise design requirements for the next-generation tool.
@@ -57,11 +76,15 @@ export default function ProjectImageToolPage() {
 
         <h3 className={styles.projectDetailSubheadingSecondary}>Key findings include:</h3>
         <ul className={styles.projectDetailList}>
-          <li>The Criticality of Image-to-Image (I2I): We confirmed that for practical production, the industry's focus on Text-to-Image (T2I) is secondary. T2I was found useful for initial brainstorming, but I2I functionality was overwhelmingly identified as the most crucial feature for the iterative expert workflow.</li>
-          <li>Workflow & Team-Level Impact: The custom-trained AI proved highly effective at establishing and maintaining art style consistency. This significantly reduced the manual review burden on art directors and streamlined team collaboration.</li>
-          <li>Emergence of an "AI Collaboration Skill": Access to the same AI did not yield uniform results. We observed a distinct "AI collaboration skill"—an artist's proficiency in guiding and curating AI output—which directly correlated with their overall creative performance.</li>
-          <li>New Professional Concerns: As dependency on the tools grew, artists raised significant concerns about the potential obsolescence of novice-level designers, as the AI effectively automated many traditional entry-level tasks.</li>
+          <li>Custom trained AI maintained studio style consistency well, cutting down art directors’ review overhead. This improved handoffs and made team collaboration faster and cleaner.</li>
+          <li>Even with the same AI, outcomes varied by artist. Skill in steering and curating AI outputs strongly correlated with creative performance.</li>
+          <li>As tool reliance increased, artists worried novice roles could shrink. AI was automating many entry level tasks that used to be key for learning.</li>
+          <li>To address the limitations of T2I specifically during reference exploration and sketching, I proposed a novel interaction environment that unifies these disjointed stages. The system integrates a real-time sketching interface where users can perform reference exploration directly, extract silhouettes from those references, and retouch them to produce immediate visual outputs. From these generated results, artists can selectively extract visual fragments and assemble them into a free-form collage. This collage serves as the basis for high-fidelity generation, establishing a seamless workflow that bridges abstract ideation and detailed production to scaffold the tacit visual knowledge of experts.</li>
         </ul>
+
+        <p className={styles.projectDetailBody}>
+          The study’s results are being consolidated, and the paper is currently being prepared for submission to DIS 2026. However, unlike IdeAmigos, whose paper has already been completed, this work is still in progress, so we did not mark it as a DIS submission.
+        </p>
 
       </section>
 
