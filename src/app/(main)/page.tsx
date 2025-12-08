@@ -67,7 +67,7 @@ export default function Home() {
                 <li>AI Researcher in AI R&D Center</li>
                 <li>Key Research Contributions:
                   <ul>
-                    <li>Developed novel pipelines for character agents enabling dynamic collaboration (LLM-based).</li>
+                    <li>Developed novel pipelines for character agents enabling dynamic collaboration (LLMs-based).</li>
                     <li>Developed an image generation tool, focusing on Designer UX and Controllability through user studies.</li>
                     <li>Fine-tuned generative models (LLMs, Diffusion), architected agent systems.</li>
                   </ul>
