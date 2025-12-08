@@ -24,9 +24,9 @@ export default function Home() {
             <br /><br />
             My research explores the critical tension between AI-driven efficiency
             and the preservation of human cognition. I design AI-augmented
-            interfaces and interaction patterns that reshape user workflows,
+            systems and interaction patterns that reshape user workflows,
             prioritizing human-led reasoning and agency. This approach
-            enhances core abilities like critical thinking, learning, and creativity.
+            enhances core abilities like critical thinking, learning, creativity.
           </p>
           <Image 
             src="/images/Diagram.png" 
@@ -67,8 +67,9 @@ export default function Home() {
                 <li>AI Researcher in AI R&D Center</li>
                 <li>Key Research Contributions:
                   <ul>
-                    <li>Developing Novel Pipelines for interaction among Character Agents (LLM-based)</li>
-                    <li>Developing an image generation tool, focusing on Designer UX and Controllability through user studies.</li>
+                    <li>Developed novel pipelines for character agents enabling dynamic collaboration (LLM-based).</li>
+                    <li>Developed an image generation tool, focusing on Designer UX and Controllability through user studies.</li>
+                    <li>Fine-tuned generative models (LLMs, Diffusion), architected agent systems.</li>
                   </ul>
                 </li>
               </ul>
