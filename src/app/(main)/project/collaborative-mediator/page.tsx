@@ -16,7 +16,7 @@ export default function ProjectMediatorPage() {
           <p className={styles.projectDetailSubtitle}>
             Under Review: Revision at CSCW 26: Proceedings of the CHI Conference on Human Factors in Computing Systems
             <br />
-            <span className={styles.projectDetailAuthor}>Hajun Kim*</span>, Jini Kim<span className={styles.projectDetailAuthor}>*</span> (co-first author)
+            <span className={styles.projectDetailAuthor}>Hajun Kim*</span>, Jini Kim<span className={styles.projectDetailAuthor}>*</span> (co-first author), Yunjae Choii<span className={styles.projectDetailAuthor}></span>
           </p>
         </header>
 
