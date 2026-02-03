@@ -17,7 +17,7 @@ export default function ProjectOrchestrationPage() {
           <p className={styles.projectDetailSubtitle}>
             In preparation to DIS 26: ACM Designing Interactive Systems
             <br />
-            <span className={styles.projectDetailAuthor}>Hajun Kim*</span>, Jeongeon Park 
+            <span className={styles.projectDetailAuthor}>Hajun Kim</span>, Jeongeon Park 
           </p>
         </header>
 
