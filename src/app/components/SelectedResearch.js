@@ -37,7 +37,7 @@ const projectData = [
     shadowType: 'boxShadow',
     link: '/project/collaborative-mediator',
     title: 'Generative AI as a Collaborative Mediator: Design Opportunities, and Concerns in Creative Collaboration',
-    context: 'Conditionally Accepted: CSCW 2026 Paper',
+    context: '(Conditionally Accepted) CSCW 2026 Paper',
     authors: (
       <>
         <span className={styles.author}>Hajun Kim*</span>, Jini Kim* (co-first author), Yunjae Choi

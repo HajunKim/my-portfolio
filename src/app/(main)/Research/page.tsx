@@ -19,7 +19,7 @@ const publicationData = [
   {
     id: 2,
     title: 'Generative AI as a Collaborative Mediator: Design Opportunities, and Concerns in Creative Collaboration',
-    context: 'CSCW 2026 Paper',
+    context: '(Conditionally Accepted) CSCW 2026 Paper',
     authors: (
       <>
         <span className={styles.pubAuthor}>Hajun Kim*</span>, Jini Kim* (co-first author), Yunjae Choi
