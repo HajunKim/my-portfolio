@@ -37,7 +37,7 @@ const projectData = [
     shadowType: 'boxShadow',
     link: '/project/collaborative-mediator',
     title: 'Generative AI as a Collaborative Mediator: Design Opportunities, and Concerns in Creative Collaboration',
-    context: '(Under Review: Revision at CSCW 2026 Paper)',
+    context: 'Conditionally Accepted: CSCW 2026 Paper',
     authors: (
       <>
         <span className={styles.author}>Hajun Kim*</span>, Jini Kim* (co-first author), Yunjae Choi
@@ -58,7 +58,7 @@ const projectData = [
     shadowType: 'dropShadow',
     link: '/project/unlocking-creator-ai',
     title: 'Unlocking Creator-AI Synergy: Challenges, Requirements, and Design Opportunities in AI-Powered Short-Form Video Production',
-    context: '(CHI 2024 Paper)',
+    context: 'CHI 2024 Paper',
     authors: (
       <>
         <span className={styles.author}>Hajun Kim*</span>, Jini Kim* (co-first author)
