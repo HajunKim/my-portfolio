@@ -46,7 +46,7 @@ export default function MainLayout({
                 href="/HajunKim_CV.pdf" 
                 download
                 >
-                Curricular Vital
+                Curricular Vitae
                 </a>
               <Link href="https://www.linkedin.com/in/%ED%95%98%EC%A4%80-%EA%B9%80-85305b23b/" target="_blank">
                 <Image 
