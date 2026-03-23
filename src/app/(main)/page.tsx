@@ -22,11 +22,11 @@ export default function Home() {
           <p>
             Hello, I am Hajun Kim. I'm currently working at NEOWIZ Games as an AI researcher.
             <br /><br />
-            My research explores the critical tension between AI-driven efficiency
-            and the preservation of human cognition. I design AI-augmented
-            systems and interaction patterns that reshape user workflows,
-            prioritizing human-led reasoning and agency. This approach
-            enhances core abilities like critical thinking, learning, creativity.
+            My research explores how AI can support human coordination and interaction
+             without diminishing human agency. I design AI-augmented systems that help
+              people navigate different perspectives and roles, while strengthening
+               creativity, critical thinking, and meaningful participation. 
+               More broadly, I am interested in how such systems can foster healthier collaborative and online environments.
           </p>
           <Image 
             src="/images/Diagram.png" 
