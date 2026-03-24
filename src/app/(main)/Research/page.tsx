@@ -9,7 +9,7 @@ const publicationData = [
   {
     id: 1,
     title: 'IdeAmigos: Human-Orchestrated Multi-agent Tool for Supporting End-to-End Brainstorming',
-    context: '(Under Review: DIS 2026 Paper)',
+    context: 'In preparation',
     authors: (
       <>
         <span className={styles.pubAuthor}>Hajun Kim</span>, Jeongeon Park

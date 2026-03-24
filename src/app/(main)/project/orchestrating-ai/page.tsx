@@ -15,7 +15,7 @@ export default function ProjectOrchestrationPage() {
           IdeAmigos: Human-Orchestrated Multi-agent Tool for Supporting End-to-End Brainstorming
           </h1>
           <p className={styles.projectDetailSubtitle}>
-            In preparation to DIS 26: ACM Designing Interactive Systems
+            In preparation
             <br />
             <span className={styles.projectDetailAuthor}>Hajun Kim</span>, Jeongeon Park 
           </p>
