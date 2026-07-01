@@ -14,7 +14,7 @@ export default function ProjectMediatorPage() {
             Generative AI as a Collaborative Mediator: Design Opportunities, and Concerns in Creative Collaboration
           </h1>
           <p className={styles.projectDetailSubtitle}>
-            (Conditionally Accepted) CSCW 26: The ACM Conference on Computer-Supported Cooperative Work and Social Computing
+            CSCW 26: The ACM Conference on Computer-Supported Cooperative Work and Social Computing
             <br />
             <span className={styles.projectDetailAuthor}>Hajun Kim*</span>, Jini Kim<span className={styles.projectDetailAuthor}>*</span> (co-first author), Yunjae Choii<span className={styles.projectDetailAuthor}></span>
           </p>
