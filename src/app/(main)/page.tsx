@@ -20,19 +20,17 @@ export default function Home() {
         <div className={styles.aboutSection}>
           <h2>About Me</h2>
           <p>
-            Hello, I am Hajun Kim. I'm currently working at NEOWIZ Games as an AI researcher.
+            Hello, I’m Hajun Kim, an HCI researcher.
             <br /><br />
-            My research explores how to balance AI efficiency with human cognitive processes. 
+            My research examines how AI reshapes human roles, agency, and relationships in judgment and collaboration.
+             Through user orchestration and deliberate friction, I design AI-mediated systems that preserve human control,
+              tacit knowledge, and critical reflection without sacrificing the benefits of automation.
+            
+            {/*My research explores how to balance AI efficiency with human cognitive processes. 
             I design AI-mediated systems that respect users' tacit knowledge and agency, 
             introducing thoughtful design interventions to prevent autopilot behaviors. 
             By helping people navigate complex tasks and diverse perspectives, 
-            I aim to build AI tools that actively support critical thinking and continuous cognitive growth.
-            
-            {/*My research explores how AI can support human coordination and interaction
-             without diminishing human agency. I design AI-augmented systems that help
-              people navigate different perspectives and roles, while strengthening
-               creativity, critical thinking, and meaningful participation. 
-               More broadly, I am interested in how such systems can foster healthier collaborative and online environments.*/}
+            I aim to build AI tools that actively support critical thinking and continuous cognitive growth.*/}
           </p>
           <Image 
             src="/images/Diagram.png" 
@@ -68,7 +66,7 @@ export default function Home() {
           <section className={styles.workSection}>
             <h2>Work Experience</h2>
             <div className={styles.workItem}>
-              <h3><span className={styles.year}>2025</span> NEOWIZ <span className={styles.company}>(Game Company)</span></h3>
+              <h3><span className={styles.year}>2026</span> NEOWIZ <span className={styles.company}>(Game Company)</span></h3>
               <ul>
                 <li>AI Researcher in AI R&D Center</li>
                 <li>Key Research Contributions:
