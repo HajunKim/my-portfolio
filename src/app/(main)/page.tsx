@@ -19,23 +19,21 @@ export default function Home() {
         {/* About Me & 다이어그램 */}
         <div className={styles.aboutSection}>
           <h2>About Me</h2>
-          <p>
-            Hello, I’m Hajun Kim, an HCI researcher. 
-            <br /><br />
-            My research examines how AI shapes human judgment, agency, and social interaction. 
-             <br /> I design systems in which AI continually refines its understanding of people’s contexts and adapts its support to how people understand AI and what they expect from it. 
-             This understanding informs how these systems balance AI initiative with human orchestration to improve performance while preserving human agency, tacit knowledge, and critical reflection.
+          <p style={{ margin: "0 0 8px" }}>
+            Hello, I’m Hajun Kim, an HCI researcher.
+          </p>
 
-
-            {/*My research examines how AI reshapes human roles, agency, and relationships in judgment and collaboration.
-             Through user orchestration and deliberate friction, I design AI-mediated systems that preserve human control,
-              tacit knowledge, and critical reflection without sacrificing the benefits of automation.*/}
-            
-            {/*My research explores how to balance AI efficiency with human cognitive processes. 
-            I design AI-mediated systems that respect users' tacit knowledge and agency, 
-            introducing thoughtful design interventions to prevent autopilot behaviors. 
-            By helping people navigate complex tasks and diverse perspectives, 
-            I aim to build AI tools that actively support critical thinking and continuous cognitive growth.*/}
+          <p style={{ margin: "0 0 8px" }}>
+            My research examines how AI shapes human judgment, agency, and social interaction.
+          
+            I design systems in which AI continually refines its understanding of people’s
+            contexts and adapts its support to how people understand AI and what they
+            expect from it.
+          </p>
+          <p style={{ margin: 0 }}>
+          This understanding informs how these systems balance AI
+            initiative with human orchestration to improve performance while preserving
+            human agency, tacit knowledge, and critical reflection.  
           </p>
           <Image 
             src="/images/Diagram.png" 
@@ -77,7 +75,7 @@ export default function Home() {
                 <li>Key Research Contributions:
                   <ul>
                     <li>Developed novel pipelines for character agents enabling dynamic collaboration (LLMs-based).</li>
-                    <li>Developed an image generation tool, focusing on Designer UX and Controllability through user studies.</li>
+                    <li>Developed an image generation tool through iterative studies of designers’ workflows with GenAI.</li>
                     <li>Fine-tuned generative models (LLMs, Diffusion) and executed ML optimization.</li>
                   </ul>
                 </li>
