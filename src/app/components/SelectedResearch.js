@@ -10,12 +10,12 @@ import styles from '../page.module.css';
 const projectData = [
     {
         id: 3,
-        image: '/images/IdeAmigos_FIRST.png',
-        width: 345,
-        height: 159,
+        image: '/images/ideamigos/interface.png',
+        width: 344,
+        height: 140,
         shadowType: 'boxShadow',
         link: '/project/orchestrating-ai',
-        title: 'IdeAmigos: Human-Orchestrated Multi-agent Tool for Supporting End-to-End Brainstorming',
+        title: 'IdeAmigos: Comparing User-Orchestrated and System-Orchestrated Multi-Agent Brainstorming',
         context: '(In Preparation)',
         authors: (
             <>
@@ -23,10 +23,10 @@ const projectData = [
             </>
         ),
         description: [
-            'Developed a multi-agent system enabling users to actively orchestrate AI agents with distinct roles for end-to-end brainstorming.',
-            'Designed a system that allowed users to tune agent-level attributes (e.g., Creativity) and dialogue-level flow (e.g., Response Length).',
-            'Conducted a within-subjects study (N=12) comparing the user-orchestrated tool against a single-agent brainstorming tool.',
-            'Results suggest that user-orchestration led to higher-quality and more diverse ideas, while highlighting concerns about social presence and user bias.',
+            'Compared user-orchestrated and system-orchestrated brainstorming with the same four AI agents to examine creative outcomes, agency, intent alignment, psychological ownership, and coordination burden.',
+            'Conducted a within-subjects study with 16 students with HCI or UX coursework experience, using two counterbalanced 30-minute brainstorming sessions.',
+            'User orchestration received higher average user-experience ratings, without statistically significant differences; creative outcomes varied by task, with broadly similar semantic diversity.',
+            'Identified design implications for balancing orchestration control with attention, adapting support to tasks and stages, revisiting ideas, and encouraging critical engagement.',
         ],
     },
   {
@@ -36,7 +36,7 @@ const projectData = [
     height: 159,
     shadowType: 'boxShadow',
     link: '/project/collaborative-mediator',
-    title: 'Generative AI as a Collaborative Mediator: Design Opportunities, and Concerns in Creative Collaboration',
+    title: 'Generative AI as a Mediator in Creator Collaboration: Challenges, Design Opportunities, and Concerns',
     context: 'CSCW 2026 Paper',
     authors: (
       <>
@@ -44,10 +44,10 @@ const projectData = [
       </>
     ),
     description: [
-      'Explored GenAI tools as mediators for inter-creator collaboration via interviews (N=20; narrative writers & visual designers) and a participatory design study.',
-      'Analyzed the collaboration challenges between writers and designers during the initial conceptualization phase.',
-      'Conducted a participatory design study, using multi-stage stimuli to help creators envision GenAI-mediated collaboration.',
-      'Identified design opportunities (e.g., bridging knowledge gaps) and creator concerns (e.g., privacy issues, reduced communication) for GenAI as a mediator.',
+      'Examined how differences in expertise, expressive modalities, and creative priorities complicate common ground between game narrative writers and visual designers.',
+      'Conducted a multi-method study with 10 narrative writers and 10 visual designers in South Korea, combining preliminary interviews, creative prompting, and participatory design.',
+      'Identified opportunities for GenAI to translate creative intent, maintain shared context, and mediate communication, alongside concerns about reputation, trust, and reduced human communication.',
+      'Proposed Dual-Space GenAI: a Personal Studio and Shared Workshop that connect individual creative work with collaboration while preserving control over contextual sharing.',
     ],
   },
   {

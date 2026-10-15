@@ -490,6 +490,20 @@
   margin-top: 10px;
 }
 
+.projectFigureLink {
+  display: block;
+  cursor: zoom-in;
+  background: #fff;
+  border-radius: 4px;
+}
+
+.projectFigureFullSize {
+  display: inline-block;
+  color: #00875a;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 .projectDetailSubheadingSecondary {
   font-size: 15px;
   font-weight: 600;

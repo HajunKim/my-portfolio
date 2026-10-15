@@ -8,7 +8,7 @@ import SelectedResearch from '../../components/SelectedResearch'; // 재사용 �
 const publicationData = [
   {
     id: 1,
-    title: 'IdeAmigos: Human-Orchestrated Multi-agent Tool for Supporting End-to-End Brainstorming',
+    title: 'IdeAmigos: Comparing User-Orchestrated and System-Orchestrated Multi-Agent Brainstorming',
     context: 'In preparation',
     authors: (
       <>
@@ -18,7 +18,7 @@ const publicationData = [
   },
   {
     id: 2,
-    title: 'Generative AI as a Collaborative Mediator: Design Opportunities, and Concerns in Creative Collaboration',
+    title: 'Generative AI as a Mediator in Creator Collaboration: Challenges, Design Opportunities, and Concerns',
     context: 'CSCW 2026 Paper',
     authors: (
       <>

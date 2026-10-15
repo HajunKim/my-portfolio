@@ -12,7 +12,7 @@ export default function ProjectOrchestrationPage() {
         {/* --- 1. 헤더 (제목, 저자) --- */}
         <header className={styles.projectDetailHeader}>
           <h1 className={styles.projectDetailTitle}>
-          IdeAmigos: Human-Orchestrated Multi-agent Tool for Supporting End-to-End Brainstorming
+            IdeAmigos: Comparing User-Orchestrated and System-Orchestrated Multi-Agent Brainstorming
           </h1>
           <p className={styles.projectDetailSubtitle}>
             In preparation
@@ -21,185 +21,188 @@ export default function ProjectOrchestrationPage() {
           </p>
         </header>
 
-        {/* --- 2. Research Focus --- */}
+        <h2 className={styles.projectDetailSubheadingSecondary}>Research Focus</h2>
         <p className={styles.projectDetailBody}>
-          <strong className={styles.projectDetailSubheading}>Research Focus:</strong>
+          Who should orchestrate an AI team during creative collaboration—the user or the system?
           <br /><br />
-          This study investigates the effectiveness of 'user-led orchestration', a method where a user actively collaborates with a team of independent AI agents. We introduce IdeAmigos, a multi-agent tool designed to support the entire brainstorming process—from divergence and refinement to convergence to test this concept. The core of this orchestration method is enabling the user to strategically steer the collaboration by directly tuning individual agent attributes and guiding the global conversational flow.
+          We introduce <strong>IdeAmigos</strong>, a brainstorming tool with four AI agents offering complementary creative perspectives. By comparing <strong>user-orchestrated and system-orchestrated collaboration with the same agent team</strong>, we examine how orchestration authority shapes creative outcomes, agency, intent alignment, psychological ownership, and coordination burden.
         </p>
 
-        {/* --- 3. 이미지 1 + 캡션 1 --- */}
         <figure className={styles.projectDetailFigure}>
-          <Image 
-            src="/images/IdeAmigos_UI.png"
-            alt="Overview of the IdeAmigos interface"
-            width={992} 
-            height={603}
-            className={styles.projectDetailImage} 
-          />
-          <figcaption className={styles.projectDetailCaption}>
-            {/* [반영] 이미지 1번 caption */}
-            Overview of the IdeAmigos interface. (a) Users brainstorm with agents in a turn-taking manner to explore ideas from diverse perspectives. (b) Interaction tuning allows control over agent behavior and conversation flow. (c) Proposed ideas are saved as sticky notes, with full history and reusability.
-          </figcaption>
-        </figure>
-
-        {/* --- 4. [반영] 텍스트 (Image 1번 2번 사이) --- */}
-        <h3 className={styles.projectDetailSubheadingSecondary}>System of IdeAmigos</h3>
-        <p className={styles.projectDetailBody} style={{marginBottom: '10px'}}>
-          While many multi-agent systems focus on automation, an approach that leaves little room for leveraging unique human strengths, IdeAmigos is designed to allow users to orchestrate real-time interactions with multiple agents. Its core components are:
-        </p>
-        <ul className={styles.projectDetailList}>
-          <li>Interface: The system is divided into three main parts: (a) the Conversational Space for user-agent dialogue , (b) the Interactive Tuning panel for controlling agent behavior , and (c) the Idea Space for managing ideas.</li>
-          <li>Orchestration (Interaction Tuning): Users conduct orchestration via the 'Interactive Tuning' panel.
-            <ul style={{marginTop: '8px'}}> {/* 중첩 리스트 */ }
-              <li>Individual Agent Tuning: Users can adjust sliders for each agent's Creativity (to modulate response variability) and Engagement (to control participation frequency).</li>
-              <li>Group Flow Tuning: Users can also control Response Length and the # of reponses / turn (number of agent responses per user input) for all agents simultaneously, managing the conversation's pace and density.</li>
-            </ul>
-          </li>
-          <li>Idea Management (Idea Space): Ideas proposed by both the user and the agents are automatically captured and saved as sticky notes in the Idea Space. Users can trace the full evolution of an idea, as each note retains its development history (e.g., how it was combined or expanded).</li>
-        </ul>
-        <p className={styles.projectDetailBody}>
-          In practice, a user collaborates with agents with diverse personas through an ongoing dialogue in the Conversational Space. Throughout this conversation, the user can steer the ideation by adjusting tuning sliders, contributing their own thoughts, or by selecting and combining ideas from the Idea Space for further refinement.
-        </p>
-
-        {/* --- 5. 이미지 2 --- */}
-        <figure className={styles.projectDetailFigure}>
-          <Image 
-            src="/images/IdeAmigos_prompt.png"
-            alt="Agent Persona Template"
-            width={986} 
-            height={264}
-            className={styles.projectDetailImage} 
-          />
-          <figcaption className={`${styles.projectDetailCaption} ${styles.captionCenter}`}>
-            {/* (캡션을 덤프에서 가져옴) */}
-            Agent Persona Template, Responder Selection Algorithm
-          </figcaption>
-        </figure>
-
-  
-
-        {/* --- 7. [반영] 텍스트 (Image 3번과 4번 사이) --- */}
-        <p className={styles.projectDetailBody}>
-          Agent Persona Template: Each agent has an independent persona (e.g., 'Matthew' the Radical Innovator, 'May' the Practical Realist), creating a complementary team needed for robust deliberation. This consistency is maintained by a template comprised of: (a) a Shared Message History, (b) Persona-Specific Instructions (defining their core persona and dynamic role for each phase), and (c) Common Instructions (outlining shared objectives and rules).
-        </p>
-        <p className={styles.projectDetailBody}>
-          Responder Selection Algorithm: When a user sets the number of responses, the system uses a decentralized mechanism to select the next speaking agent. This algorithm integrates (a) Agent Mutual Evaluation (based on their distinct persona perspectives), (b) Participation Balancing Penalty (to prevent one agent from dominating), and (c) Human-Guided Scoring (derived from the user's 'Engagement' slider setting, acting as the primary influence).
-        </p>
-
-          {/* --- 6. 이미지 3 --- */}
-          <figure className={styles.projectDetailFigure}>
-            <Image 
-              src="/images/IdeAmigos_process.png"
-              alt="User study protocol"
-              width={914} 
-              height={118}
-              className={styles.projectDetailImage} 
+          <a href="/images/ideamigos/interface.png" target="_blank" rel="noopener noreferrer" className={styles.projectFigureLink} aria-label="View full-size figure: IdeAmigos interface showing agent conversation, participation controls, and ideas with development histories">
+            <Image
+              src="/images/ideamigos/interface.png"
+              alt="IdeAmigos interface showing agent conversation, participation controls, and ideas with development histories"
+              width={3440}
+              height={1400}
+              sizes="(max-width: 960px) 100vw, (max-width: 1440px) 75vw, 1002px"
+              className={styles.projectDetailImage}
             />
+          </a>
           <figcaption className={styles.projectDetailCaption}>
-            {/* 캡션을 4번 캡션으로 넣으라는 요청이 없어서 비워둡니다. */}
-            The 100-minute user study consisted of two sessions with IdeaAmigos and the baseline tool, each including a 30-minute brainstorming phase utilizing the given tool.
+            IdeAmigos combines conversation with four complementary agents, interaction-level controls, and a shared idea space.
+            {' '}
+            <a href="/images/ideamigos/interface.png" target="_blank" rel="noopener noreferrer" className={styles.projectFigureFullSize}>View full size</a>
           </figcaption>
         </figure>
 
-
-        {/* --- 9. [반영] 텍스트 (Image 4번과 5번 사이) --- */}
-        <h3 className={styles.projectDetailSubheadingSecondary}>Experiment</h3>
-        <p className={styles.projectDetailBody} style={{marginBottom: '5px'}}>
-          A user study was conducted with 12 UX design students.
-          <br /><br />
-          Task Goal: In each session, participants performed a 30-minute brainstorming task. The goal was to generate ideas (divergence), then refine and combine them (refinement), and finally select their top five ideas (convergence).
-          <br /><br />
-          Methodology: The study used a 'within-subjects' design. This means each participant completed the task twice, using two different conditions:
+        <h2 className={styles.projectDetailSubheadingSecondary}>System Design</h2>
+        <p className={styles.projectDetailBody} style={{ marginBottom: '16px' }}>
+          IdeAmigos supports brainstorming from <strong>divergence through elaboration to evaluation</strong>, combining conversation, interaction controls, and a shared idea space.
         </p>
         <ul className={styles.projectDetailList}>
-          <li>IdeAmigos: A multi-agent system (4 agents).</li>
-          <li>Baseline: A single-agent system (1 agent) with an identical interface. Two different, open-ended topics (e.g., "reducing digital fatigue") were used. The order of conditions and topics was counterbalanced across participants to minimize learning effects.</li>
+          <li><strong>Complementary agents:</strong> Riley proposes radical ideas, Casey explores structural innovation, Alex expands existing ideas, and Jordan evaluates practical feasibility. Their contributions adapt to each brainstorming stage.</li>
+          <li><strong>Interaction-level orchestration:</strong> Users adjust each agent’s participation and access to external information, alongside group-level response length and the number of responses per user input.</li>
+          <li><strong>Idea management:</strong> Ideas are automatically saved as sticky notes with development histories. Users can revisit, combine, and refine them before selecting final ideas.</li>
+          <li><strong>System orchestration:</strong> An alternative version automatically manages interaction settings based on the brainstorming stage and conversational context. Users continue to guide ideas through conversation, stage switching, and selection.</li>
         </ul>
-        <p className={styles.projectDetailBody}>
-          Metrics: Researchers measured outcomes like idea quality (rated by experts for innovation, relevance, insightfulness), idea diversity (using semantic clustering), originality, and users' subjective satisfaction via post-task surveys.
-        </p>
 
-
-      
-        {/* --- 8. 이미지 4 + 캡션 4 --- */}
-          <figure className={styles.projectDetailFigure}>
-            <Image 
-              src="/images/IdeAmigos_Result.png"
-              alt="Experimental Results"
-              width={986}
-              height={264}
-              className={styles.projectDetailImage} 
+        <figure className={styles.projectDetailFigure}>
+          <a href="/images/ideamigos/prompt-and-response.png" target="_blank" rel="noopener noreferrer" className={styles.projectFigureLink} aria-label="View full-size figure: Agent prompt structure and response selection algorithm combining shared conversation history, agent personas, shared objectives, and participation settings">
+            <Image
+              src="/images/ideamigos/prompt-and-response.png"
+              alt="Agent prompt structure and response selection algorithm combining shared conversation history, agent personas, shared objectives, and participation settings"
+              width={8788}
+              height={2290}
+              sizes="(max-width: 960px) 100vw, (max-width: 1440px) 75vw, 1002px"
+              className={styles.projectDetailImage}
             />
+          </a>
           <figcaption className={styles.projectDetailCaption}>
-            {/* [반영] Image 4번 caption */}
-            Experimental Results: Table of Idea Quality, Diversity, and Originality.
+            Agent prompt structure and response selection: conversation history, agent personas, shared objectives, and participation settings guide agent contributions.
+            {' '}
+            <a href="/images/ideamigos/prompt-and-response.png" target="_blank" rel="noopener noreferrer" className={styles.projectFigureFullSize}>View full size</a>
           </figcaption>
         </figure>
 
-        {/* --- 10. 이미지 5 + 캡션 5 --- */}
-        <figure className={styles.projectDetailFigure}>
-          <Image 
-            src="/images/IdeAmigos_Survey.png"
-            alt="Experimental Results Table"
-            width={782}
-            height={603}
-            className={styles.projectDetailImage} 
-          />
-          <figcaption className={styles.projectDetailCaption}>
-            {/* [반영] Image 5번 caption */}
-            Users' subjective satisfaction via post-task surveys including NASA-TLX
-          </figcaption>
-        </figure>
-        
-        
-        
-        {/* --- 11. [반영] 텍스트 (Image 7번과 8번 사이 -> 5번과 6번 사이로 해석) --- */}
-        <h3 className={styles.projectDetailSubheadingSecondary}>Key Results</h3>
-        <ul className={styles.projectDetailList}>
-          <li>Idea Quality & Diversity: IdeAmigos produced higher-quality ideas compared to the single-agent baseline. Notably, the top 3 highest-rated ideas for both topics were all generated using IdeAmigos. It also generated a broader and more diverse range of ideas, producing more semantic clusters and outliers.</li>
-          <li>Idea Homogeneity: Despite greater within-session diversity, IdeAmigos showed comparable inter-user homogeneity to the baseline, revealing the inherent limitation of shared base models in fostering originality across users.</li>
-          <li>User Perception: Participants rated the ideas from IdeAmigos as statistically significantly more original (p=0.013), valuable (p=0.047), and surprising (p=0.018) than those from the baseline.</li>
-          <li>Usability: Despite the better ideas, participants reported lower usability satisfaction with IdeAmigos. They cited that managing multiple conversations and reading more text increased fatigue and split their attention.</li>
-        </ul>
-
-
-        {/* --- 12. 이미지 6 + 캡션 6 --- */}
-        <figure className={styles.projectDetailFigure}>
-          <Image 
-            src="/images/IdeAmigos_oche_result.png"
-            alt="Average tuning values"
-            width={948}
-            height={27} // (덤프의 27px은 너무 작아보입니다. 실제 이미지 높이에 맞춰 자동 조절됩니다)
-            className={styles.projectDetailImage} 
-          />
-          <figcaption className={styles.projectDetailCaption}>
-            {/* [반영] Image 8번 caption -> 6번 캡션으로 적용 */}
-            Average tuning values of creativity, engagement, response length, and number of responses per turn during user interaction with IdeAmigos. Each metric ranges from 0 to 1 for creativity and engagement, and from 1 to 10 for response length and number of responses per turn.          </figcaption>
-        </figure>
-
-        {/* --- 13. [반영] 텍스트 (Image 8번 아래) --- */}
-        <h3 className={styles.projectDetailSubheadingSecondary}>User Strategies (Orchestration)</h3>
-        <p className={styles.projectDetailBody} style={{marginBottom: '5px'}}>
-          Participants actively orchestrated the agents using specific strategies:
+        <h2 className={styles.projectDetailSubheadingSecondary}>User Study</h2>
+        <p className={styles.projectDetailBody} style={{ marginBottom: '16px' }}>
+          We conducted a <strong>within-subjects study with 16 students with HCI or UX coursework experience</strong>. Each participant completed two 30-minute brainstorming sessions, with condition order and topic assignment counterbalanced.
         </p>
         <ul className={styles.projectDetailList}>
-          <li>Phase-Based Tuning: Users adapted the controls based on the brainstorming phase.
-            <ul style={{marginTop: '8px'}}> {/* 중첩 리스트 */ }
-              <li>Divergence: They increased the # of reponses / turn to "Listen Broadly" and quickly gather a wide range of perspectives.</li>
-              <li>Refinement: They increased the Response Length to "Listen Deeply" and get more detailed, in-depth feedback on specific ideas.</li>
-            </ul>
-          </li>
-          <li>Role-Based Selection: Users dynamically selected agents based on their needs. They increased the 'Engagement' of the creative agent (Matthew) during divergence and the practical agent (May) during refinement.</li>
-          <li>Adopting a Facilitator Role: Many users shifted from being idea generators to acting as 'facilitators'. They focused on directing the agents, identifying good ideas, and combining agent-generated content rather than contributing their own.</li>
+          <li><strong>Conditions:</strong> User-orchestrated vs. system-orchestrated collaboration, using the same four agents and core brainstorming functions.</li>
+          <li><strong>Tasks:</strong> Generate, elaborate, and select five ideas for reducing digital fatigue or reconnecting with someone after a long period without contact.</li>
+          <li><strong>Evaluation:</strong> Expert ratings of idea quality, semantic analyses of diversity and between-user distinctiveness, post-task surveys, interaction logs, and interviews.</li>
         </ul>
 
-      {/* --- 11. [반영] 텍스트 (Image 7번과 8번 사이 -> 5번과 6번 사이로 해석) --- */}
-      <h3 className={styles.projectDetailSubheadingSecondary}>Key Findings</h3>
+        <figure className={styles.projectDetailFigure}>
+          <a href="/images/ideamigos/study-procedure.png" target="_blank" rel="noopener noreferrer" className={styles.projectFigureLink} aria-label="View full-size figure: Study procedure with preparation, two 30-minute brainstorming sessions, post-task surveys, and an interview">
+            <Image
+              src="/images/ideamigos/study-procedure.png"
+              alt="Study procedure with preparation, two 30-minute brainstorming sessions, post-task surveys, and an interview"
+              width={6896}
+              height={2324}
+              sizes="(max-width: 960px) 100vw, (max-width: 1440px) 75vw, 1002px"
+              className={styles.projectDetailImage}
+            />
+          </a>
+          <figcaption className={styles.projectDetailCaption}>
+            Within-subjects study procedure, including two 30-minute brainstorming sessions with counterbalanced orchestration conditions.
+            {' '}
+            <a href="/images/ideamigos/study-procedure.png" target="_blank" rel="noopener noreferrer" className={styles.projectFigureFullSize}>View full size</a>
+          </figcaption>
+        </figure>
+
+        <h2 className={styles.projectDetailSubheadingSecondary}>Key Results</h2>
         <ul className={styles.projectDetailList}>
-          <li>Model Homogeneity: All agents were built on the same base LLM, which we suggest contributed to the high homogeneity of ideas across users . Future work should explore assigning different base models or fine-tuning strategies to each agent to enhance true divergence.</li>
-          <li>Revisiting Social Presence and User Bias: This work calls for a fundamental reexamination of social presence and user bias in multi-agent contexts. We observed that biases studied in single-agent collaboration (like anchoring effects and social loafing ) reemerge in new and novel forms in a multi-agent setting. The very act of agents interacting with each other led users to perceive them as a 'team,' creating new cognitive biases. Future work must investigate how these emerging social dynamics shape user perception and reasoning, and explore how to design interfaces that preserve critical thinking.</li>
-          <li>Interaction Load: Participants reported cognitive load from managing multiple text-based conversations. We see an opportunity to explore multimodal interfaces, such as using TTS or avatars, to make the interaction more accessible and less mentally taxing. </li>
+          <li><strong>Positive trends in user experience:</strong> User orchestration received higher average ratings for creativity support, agency, intent alignment, and psychological ownership. These differences were not statistically significant.</li>
+        </ul>
+
+        <figure className={styles.projectDetailFigure}>
+          <a href="/images/ideamigos/survey-overview.png" target="_blank" rel="noopener noreferrer" className={styles.projectFigureLink} aria-label="View full-size figure: Survey overview comparing user-orchestrated and system-orchestrated collaboration">
+            <Image
+              src="/images/ideamigos/survey-overview.png"
+              alt="Survey overview comparing user-orchestrated and system-orchestrated collaboration"
+              width={3318}
+              height={2052}
+              sizes="(max-width: 960px) 100vw, (max-width: 1440px) 75vw, 1002px"
+              className={styles.projectDetailImage}
+            />
+          </a>
+          <figcaption className={styles.projectDetailCaption}>
+            Post-task survey comparisons between user and system orchestration. User orchestration received higher average ratings on several experience measures, without statistically significant differences.
+            {' '}
+            <a href="/images/ideamigos/survey-overview.png" target="_blank" rel="noopener noreferrer" className={styles.projectFigureFullSize}>View full size</a>
+          </figcaption>
+        </figure>
+
+        <ul className={styles.projectDetailList}>
+          <li><strong>Creative outcomes varied by task:</strong> Average quality ratings favored user orchestration for digital fatigue and system orchestration for relationship reconnection. Semantic clustering showed broadly similar diversity across conditions.</li>
+        </ul>
+
+        <figure className={styles.projectDetailFigure}>
+          <a href="/images/ideamigos/performance-tables.png" target="_blank" rel="noopener noreferrer" className={styles.projectFigureLink} aria-label="View full-size figure: Tables comparing expert-rated idea quality, semantic clustering, and conversation activity across user and system orchestration">
+            <Image
+              src="/images/ideamigos/performance-tables.png"
+              alt="Tables comparing expert-rated idea quality, semantic clustering, and conversation activity across user and system orchestration"
+              width={2784}
+              height={760}
+              sizes="(max-width: 960px) 100vw, (max-width: 1440px) 75vw, 1002px"
+              className={styles.projectDetailImage}
+            />
+          </a>
+          <figcaption className={styles.projectDetailCaption}>
+            Creative outcome and interaction measures across conditions: expert-rated idea quality, semantic clustering, and conversation activity.
+            {' '}
+            <a href="/images/ideamigos/performance-tables.png" target="_blank" rel="noopener noreferrer" className={styles.projectFigureFullSize}>View full size</a>
+          </figcaption>
+        </figure>
+
+        <ul className={styles.projectDetailList}>
+          <li><strong>Managing agents and developing ideas were distinct experiences:</strong> Some participants experienced orchestration as a creative contribution that helped express their intentions. Others found that managing agents diverted attention from examining and developing ideas.</li>
+          <li><strong>Collaboration tendencies mattered:</strong> In exploratory analyses, stronger analytical listening tendencies were associated with smaller advantages of user orchestration in agency, intent alignment, and creativity support.</li>
+        </ul>
+
+        <figure className={styles.projectDetailFigure}>
+          <a href="/images/ideamigos/analytical-listening.png" target="_blank" rel="noopener noreferrer" className={styles.projectFigureLink} aria-label="View full-size figure: Exploratory analysis of analytical listening tendencies and differences in core perceived outcomes between user and system orchestration">
+            <Image
+              src="/images/ideamigos/analytical-listening.png"
+              alt="Exploratory analysis of analytical listening tendencies and differences in core perceived outcomes between user and system orchestration"
+              width={2458}
+              height={1432}
+              sizes="(max-width: 960px) 100vw, (max-width: 1440px) 75vw, 1002px"
+              className={styles.projectDetailImage}
+            />
+          </a>
+          <figcaption className={styles.projectDetailCaption}>
+            Exploratory relationship between analytical listening tendencies and differences in core perceived outcomes across orchestration conditions.
+            {' '}
+            <a href="/images/ideamigos/analytical-listening.png" target="_blank" rel="noopener noreferrer" className={styles.projectFigureFullSize}>View full size</a>
+          </figcaption>
+        </figure>
+
+        <h2 className={styles.projectDetailSubheadingSecondary}>How Users Collaborated</h2>
+        <ul className={styles.projectDetailList}>
+          <li><strong>From listening broadly to listening deeply:</strong> Users initially sought multiple perspectives, then reduced response counts and increased response length to develop promising ideas. A similar progression appeared under system orchestration.</li>
+          <li><strong>Selecting useful perspectives:</strong> Users adjusted agent participation according to the relevance and usefulness of contributions, amplifying promising perspectives and limiting repetitive or unsuitable ones.</li>
+          <li><strong>Steering through conversation:</strong> Under system orchestration, users remained active collaborators, using questions, constraints, and redirection to influence the discussion.</li>
+          <li><strong>Directing and exploring:</strong> Across both conditions, users sometimes established clear criteria and corrected the agents; at other times, they followed emerging suggestions to discover a direction.</li>
+        </ul>
+
+        <figure className={styles.projectDetailFigure}>
+          <a href="/images/ideamigos/orchestration-patterns.png" target="_blank" rel="noopener noreferrer" className={styles.projectFigureLink} aria-label="View full-size figure: Changes in agent participation, external information access, response length, and response count during brainstorming">
+            <Image
+              src="/images/ideamigos/orchestration-patterns.png"
+              alt="Changes in agent participation, external information access, response length, and response count during brainstorming"
+              width={9936}
+              height={4719}
+              sizes="(max-width: 960px) 100vw, (max-width: 1440px) 75vw, 1002px"
+              className={styles.projectDetailImage}
+            />
+          </a>
+          <figcaption className={styles.projectDetailCaption}>
+            Interaction patterns across brainstorming: agent participation and external information access, alongside response length and number of responses per turn.
+            {' '}
+            <a href="/images/ideamigos/orchestration-patterns.png" target="_blank" rel="noopener noreferrer" className={styles.projectFigureFullSize}>View full size</a>
+          </figcaption>
+        </figure>
+
+        <h2 className={styles.projectDetailSubheadingSecondary}>Design Implications</h2>
+        <ul className={styles.projectDetailList}>
+          <li><strong>Balance control with attention:</strong> Support users in deciding how much effort to devote to managing the team versus developing its ideas.</li>
+          <li><strong>Adapt orchestration to tasks and stages:</strong> Allow the balance between automation and direct control to change as users move between exploration, elaboration, and judgment.</li>
+          <li><strong>Preserve opportunities to revisit ideas:</strong> Let users set suggestions aside and reconsider them in new contexts, rather than permanently excluding them.</li>
+          <li><strong>Support critical engagement:</strong> Make it easier to inspect shared assumptions, distinguish substantive contributions from repetition, and request alternative perspectives.</li>
         </ul>
 
       </section>
