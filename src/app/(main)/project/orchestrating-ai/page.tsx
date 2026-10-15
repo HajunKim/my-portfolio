@@ -15,7 +15,7 @@ export default function ProjectOrchestrationPage() {
             IdeAmigos: Comparing User-Orchestrated and System-Orchestrated Multi-Agent Brainstorming
           </h1>
           <p className={styles.projectDetailSubtitle}>
-            In preparation
+            Under review at CHI 2027
             <br />
             <span className={styles.projectDetailAuthor}>Hajun Kim</span>, Jeongeon Park 
           </p>

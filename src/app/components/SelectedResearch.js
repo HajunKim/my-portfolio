@@ -16,7 +16,7 @@ const projectData = [
         shadowType: 'boxShadow',
         link: '/project/orchestrating-ai',
         title: 'IdeAmigos: Comparing User-Orchestrated and System-Orchestrated Multi-Agent Brainstorming',
-        context: '(In Preparation)',
+        context: '(Under review at CHI 2027)',
         authors: (
             <>
             <span className={styles.author}>Hajun Kim</span>, Jeongeon Park
