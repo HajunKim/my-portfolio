@@ -149,7 +149,7 @@ export default function SelectedResearch() {
               
               {/* 2. 텍스트 정보 */}
               <div className={styles.projectDetails}>
-                <h3>{project.title}</h3>
+                <h3><Link href={project.link}>{project.title}</Link></h3>
                 <p className={styles.projectContext}>
                   {project.context}
                   <br />
@@ -163,7 +163,7 @@ export default function SelectedResearch() {
               </div>
               {/* 3. 버튼 */}
               <div className={styles.projectButtonContainer}>
-                <Link href={project.link} passHref>
+                <Link href={project.link} aria-label={`View project: ${project.title}`}>
                   <Image
                     src="/images/Button.png"
                     alt="View project details"

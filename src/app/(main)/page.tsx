@@ -20,11 +20,16 @@ export default function Home() {
         <div className={styles.aboutSection}>
           <h2>About Me</h2>
           <p>
-            Hello, I’m Hajun Kim, an HCI researcher.
+            Hello, I’m Hajun Kim, an HCI researcher. 
             <br /><br />
-            My research examines how AI reshapes human roles, agency, and relationships in judgment and collaboration.
+            My research examines how AI shapes human judgment, agency, and social interaction. 
+             <br /> I design systems in which AI continually refines its understanding of people’s contexts and adapts its support to how people understand AI and what they expect from it. 
+             This understanding informs how these systems balance AI initiative with human orchestration to improve performance while preserving human agency, tacit knowledge, and critical reflection.
+
+
+            {/*My research examines how AI reshapes human roles, agency, and relationships in judgment and collaboration.
              Through user orchestration and deliberate friction, I design AI-mediated systems that preserve human control,
-              tacit knowledge, and critical reflection without sacrificing the benefits of automation.
+              tacit knowledge, and critical reflection without sacrificing the benefits of automation.*/}
             
             {/*My research explores how to balance AI efficiency with human cognitive processes. 
             I design AI-mediated systems that respect users' tacit knowledge and agency, 
