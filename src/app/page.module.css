@@ -274,6 +274,14 @@
   align-items: center;
 }
 
+.projectItemWithoutImage {
+  grid-template-columns: minmax(0, 1fr) 44px;
+}
+
+.projectItemWithoutImage .projectDetails {
+  max-width: none;
+}
+
 .projectImageContainer {
   min-width: 0;
   text-align: left;
@@ -480,6 +488,10 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+.projectDetailPortraitImage {
+  max-width: min(100%, 560px);
 }
 
 .projectDetailCaption {

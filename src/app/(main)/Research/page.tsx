@@ -7,9 +7,19 @@ import SelectedResearch from '../../components/SelectedResearch'; // 재사용 �
 // 1. 스펙 기반 'Publication' 데이터 배열
 const publicationData = [
   {
+    id: 9,
+    title: 'Steering the Discussion: Exploring Opinion Influence in Groups of Humans and AI Agents',
+    context: 'Under review at CSCW 2027',
+    authors: (
+      <>
+        <span className={styles.pubAuthor}>Hajun Kim</span>, Dawon Lee
+      </>
+    )
+  },
+  {
     id: 1,
     title: 'IdeAmigos: Comparing User-Orchestrated and System-Orchestrated Multi-Agent Brainstorming',
-    context: 'In preparation',
+    context: 'Under review at CHI 2027',
     authors: (
       <>
         <span className={styles.pubAuthor}>Hajun Kim</span>, Jeongeon Park

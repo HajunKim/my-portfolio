@@ -8,6 +8,27 @@ import styles from '../page.module.css';
 
 // 1. 기존 page.js에 있던 'projectData' 배열을 그대로 복사해옵니다.
 const projectData = [
+  {
+    id: 7,
+    image: '/images/steering-discussion/discussion-interface-v2.png',
+    width: 345,
+    height: 216,
+    shadowType: 'boxShadow',
+    link: '/project/steering-discussion',
+    title: 'Steering the Discussion: Exploring Opinion Influence in Groups of Humans and AI Agents',
+    context: '(Under review at CSCW 2027)',
+    authors: (
+      <>
+        <span className={styles.author}>Hajun Kim</span>, Dawon Lee
+      </>
+    ),
+    description: [
+      'Compared goal-directed and deliberative AI agents in discussions with two humans and two AI agents, alongside a four-human baseline, with AI identities undisclosed during discussion.',
+      'Conducted a study with 36 university students in 30-minute discussions, tracking opinions, confidence, multiparty interaction, and identity judgments.',
+      'Observed exploratory patterns in opinion strength, confidence, and interactions that final pro/con choices alone could miss.',
+      'Introduced the steering shadow to trace AI influence across support for a position, confidence, group responses, and interpretations of who contributed.',
+    ],
+  },
     {
         id: 3,
         image: '/images/ideamigos/interface.png',
@@ -131,21 +152,23 @@ export default function SelectedResearch() {
       <div className={styles.projectsList}>
         {projectData.map((project, index) => (
           <React.Fragment key={project.id}>
-            <article className={styles.projectItem}>
+            <article className={`${styles.projectItem} ${project.image ? '' : styles.projectItemWithoutImage}`}>
               {/* 1. 이미지 */}
-              <div className={styles.projectImageContainer}>
-                <Image
-                  src={project.image}
-                  alt={project.title}
-                  width={project.width}
-                  height={project.height}
-                  className={`${
-                    project.shadowType === 'dropShadow'
-                      ? styles.projectImageDropShadow
-                      : styles.projectImageShadow
-                  } ${project.centerAlign ? styles.centerImage : ''}`}
-                />
-              </div>
+              {project.image && (
+                <div className={styles.projectImageContainer}>
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    width={project.width}
+                    height={project.height}
+                    className={`${
+                      project.shadowType === 'dropShadow'
+                        ? styles.projectImageDropShadow
+                        : styles.projectImageShadow
+                    } ${project.centerAlign ? styles.centerImage : ''}`}
+                  />
+                </div>
+              )}
               
               {/* 2. 텍스트 정보 */}
               <div className={styles.projectDetails}>
